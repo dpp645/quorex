@@ -450,14 +450,14 @@ footer{
    RESPONSIVE
 ══════════════════ */
 @media(max-width:900px){
-  .servicios-header{grid-template-columns:1fr;}
+  .servicios-header{grid-template-columns:1fr;gap:2rem;}
   .proceso-grid{grid-template-columns:1fr 1fr;}
   .paso-connector{display:none;}
   .casos-grid{grid-template-columns:1fr 1fr;}
   .diff-grid{grid-template-columns:1fr;}
-  .contacto-grid{grid-template-columns:1fr;}
-  .hero-metrics{flex-direction:column;}
-  .metric{border-right:none;border-bottom:1px solid var(--borde);}
+  .contacto-grid{grid-template-columns:1fr;gap:3rem;}
+  .hero-metrics{flex-direction:column;width:100%;max-width:320px;}
+  .metric{border-right:none;border-bottom:1px solid var(--borde);padding:1rem 1.5rem;}
   .metric:last-child{border-bottom:none;}
 }
 @media(max-width:768px){
@@ -471,11 +471,25 @@ footer{
     padding:2rem;gap:1.5rem;border-bottom:1px solid var(--borde);
     z-index:199;
   }
+  .hero{padding:6rem 1.2rem 4rem;}
+  .hero h1{letter-spacing:-1.5px;}
+  .hero-actions{flex-direction:column;align-items:center;}
+  .btn-primary,.btn-outline{width:100%;text-align:center;justify-content:center;}
+  .sec{padding:4rem 1.2rem;}
   .proceso-grid{grid-template-columns:1fr;}
   .casos-grid{grid-template-columns:1fr;}
+  .diff-grid{grid-template-columns:1fr;}
   .form-row{grid-template-columns:1fr;}
-  footer{flex-direction:column;text-align:center;padding:2rem;}
-  .footer-links{justify-content:center;}
+  .srv{grid-template-columns:40px 1fr;gap:1rem;}
+  .srv-arrow{display:none;}
+  .cta-sec{padding:5rem 1.2rem;}
+  .cta-inner h2{letter-spacing:-1.5px;}
+  .contacto-sec{padding:4rem 1.2rem;}
+  .hero-metrics{max-width:100%;}
+  .metric{padding:1rem;}
+  footer{flex-direction:column;text-align:center;padding:2rem 1.2rem;}
+  .footer-links{justify-content:center;flex-wrap:wrap;gap:1.2rem;}
+  .marquee-wrap{padding:1rem 0;}
 }
 </style>
 </head>
