@@ -471,25 +471,92 @@ footer{
     padding:2rem;gap:1.5rem;border-bottom:1px solid var(--borde);
     z-index:199;
   }
-  .hero{padding:6rem 1.2rem 4rem;}
-  .hero h1{letter-spacing:-1.5px;}
-  .hero-actions{flex-direction:column;align-items:center;}
+  /* Hero */
+  .hero{padding:6rem 1.4rem 4rem;}
+  .hero h1{
+    font-size:clamp(2.4rem,11vw,3.5rem);
+    letter-spacing:-1px;
+    word-break:break-word;
+    hyphens:auto;
+  }
+  .hero-sub{font-size:.9rem;padding:0 .2rem;}
+  .hero-label{font-size:.65rem;gap:.4rem;}
+  .hero-actions{flex-direction:column;align-items:stretch;width:100%;max-width:340px;}
   .btn-primary,.btn-outline{width:100%;text-align:center;justify-content:center;}
-  .sec{padding:4rem 1.2rem;}
-  .proceso-grid{grid-template-columns:1fr;}
-  .casos-grid{grid-template-columns:1fr;}
-  .diff-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .srv{grid-template-columns:40px 1fr;gap:1rem;}
+
+  /* Secciones */
+  .sec{padding:4rem 1.4rem;}
+
+  /* Títulos h2 — evita cortes */
+  .h2{
+    font-size:clamp(1.6rem,7vw,2.2rem);
+    letter-spacing:-.8px;
+    word-break:break-word;
+    hyphens:auto;
+  }
+
+  /* Servicios */
+  .srv{grid-template-columns:36px 1fr;gap:.8rem;}
   .srv-arrow{display:none;}
-  .cta-sec{padding:5rem 1.2rem;}
-  .cta-inner h2{letter-spacing:-1.5px;}
-  .contacto-sec{padding:4rem 1.2rem;}
+  .srv-body h3{font-size:.88rem;}
+  .srv-body p{font-size:.78rem;}
+  .srv-tags{gap:.3rem;}
+  .srv-tag{font-size:.6rem;}
+
+  /* Proceso */
+  .proceso-grid{grid-template-columns:1fr;}
+  .paso-connector{display:none;}
+  .paso{border-bottom:1px solid var(--borde);border-right:none;}
+  .paso:last-child{border-bottom:none;}
+  .paso h3{font-size:.85rem;}
+  .paso p{font-size:.76rem;}
+
+  /* Diferenciadores */
+  .diff-grid{grid-template-columns:1fr;}
+  .diff-item h3{font-size:.85rem;}
+  .diff-item p{font-size:.78rem;}
+
+  /* Casos */
+  .casos-grid{grid-template-columns:1fr;}
+  .caso h3{font-size:.85rem;}
+  .caso p{font-size:.76rem;}
+
+  /* CTA */
+  .cta-sec{padding:5rem 1.4rem;}
+  .cta-inner h2{
+    font-size:clamp(2rem,9vw,3rem);
+    letter-spacing:-1px;
+    word-break:break-word;
+  }
+  .cta-inner p{font-size:.85rem;}
+
+  /* Contacto */
+  .contacto-sec{padding:4rem 1.4rem;}
+  .contacto-info h2{
+    font-size:clamp(1.5rem,6vw,2rem);
+    letter-spacing:-.5px;
+    word-break:break-word;
+  }
+  .contacto-info p{font-size:.82rem;}
+  .cal-btn{font-size:.78rem;width:100%;justify-content:center;}
+
+  /* Formulario */
+  .form-row{grid-template-columns:1fr;}
+  .fg label{font-size:.7rem;}
+  .fg input,.fg select,.fg textarea{font-size:.82rem;padding:.7rem .9rem;}
+
+  /* Métricas */
   .hero-metrics{max-width:100%;}
-  .metric{padding:1rem;}
-  footer{flex-direction:column;text-align:center;padding:2rem 1.2rem;}
-  .footer-links{justify-content:center;flex-wrap:wrap;gap:1.2rem;}
+  .metric{padding:1rem 1.5rem;}
+  .metric-val{font-size:1.5rem;}
+
+  /* Footer */
+  footer{flex-direction:column;text-align:center;padding:2rem 1.4rem;}
+  .footer-links{justify-content:center;flex-wrap:wrap;gap:1rem;}
+
+  /* Marquee */
   .marquee-wrap{padding:1rem 0;}
+  .marquee-item{font-size:.72rem;}
 }
 </style>
 </head>
