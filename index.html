@@ -841,16 +841,16 @@ footer{
       <div>
         <form class="form" id="form" action="https://formspree.io/f/mkopdnqg" method="POST" onsubmit="enviar(event)">
           <div class="form-row">
-            <div class="fg"><label>Nombre *</label><input type="text" placeholder="Tu nombre" required></div>
-            <div class="fg"><label>Empresa</label><input type="text" placeholder="Nombre de tu empresa"></div>
+            <div class="fg"><label>Nombre *</label><input type="text" name="nombre" placeholder="Tu nombre" required></div>
+            <div class="fg"><label>Empresa</label><input type="text" name="empresa" placeholder="Nombre de tu empresa"></div>
           </div>
           <div class="form-row">
-            <div class="fg"><label>Email *</label><input type="email" placeholder="tu@empresa.com" required></div>
-            <div class="fg"><label>Teléfono</label><input type="tel" placeholder="+34 600 000 000"></div>
+            <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="tu@empresa.com" required></div>
+            <div class="fg"><label>Teléfono</label><input type="tel" name="telefono" placeholder="+34 600 000 000"></div>
           </div>
           <div class="fg">
             <label>¿Qué quieres automatizar? *</label>
-            <select required>
+            <select name="servicio" required>
               <option value="" disabled selected>Selecciona un área</option>
               <option>Atención al cliente / Chatbot</option>
               <option>Análisis de documentos</option>
@@ -862,7 +862,7 @@ footer{
           </div>
           <div class="fg">
             <label>Cuéntanos más</label>
-            <textarea placeholder="Describe el proceso que quieres mejorar, cuántas personas lo realizan y qué herramientas usáis actualmente..."></textarea>
+            <textarea name="mensaje" placeholder="Describe el proceso que quieres mejorar, cuántas personas lo realizan y qué herramientas usáis actualmente..."></textarea>
           </div>
           <button type="submit" class="btn-form">Enviar mensaje →</button>
           <p class="form-nota">Sin spam. Tu información es confidencial.</p>
