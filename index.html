@@ -839,7 +839,7 @@ footer{
         </a>
       </div>
       <div>
-        <form class="form" id="form" onsubmit="enviar(event)">
+        <form class="form" id="form" action="https://formspree.io/f/mkopdnqg" method="POST" onsubmit="enviar(event)">
           <div class="form-row">
             <div class="fg"><label>Nombre *</label><input type="text" placeholder="Tu nombre" required></div>
             <div class="fg"><label>Empresa</label><input type="text" placeholder="Nombre de tu empresa"></div>
@@ -893,10 +893,27 @@ function toggleNav(){
   const n=document.getElementById('nav-links');
   n.classList.toggle('open');
 }
-function enviar(e){
+async function enviar(e){
   e.preventDefault();
-  document.getElementById('form').style.display='none';
-  document.getElementById('form-ok').style.display='block';
+  const btn = document.querySelector('.btn-form');
+  btn.textContent = 'Enviando...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('https://formspree.io/f/mkopdnqg', {
+      method: 'POST',
+      body: new FormData(e.target),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('form').style.display = 'none';
+      document.getElementById('form-ok').style.display = 'block';
+    } else {
+      throw new Error();
+    }
+  } catch {
+    btn.textContent = 'Error — inténtalo de nuevo';
+    btn.disabled = false;
+  }
 }
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
